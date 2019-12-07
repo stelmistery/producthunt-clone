@@ -35,4 +35,4 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return render(request, 'products/home.html')
+    return redirect('home')
