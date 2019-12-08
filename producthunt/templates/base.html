@@ -25,6 +25,8 @@
     <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
+    <script src="https://kit.fontawesome.com/d014c57be5.js" crossorigin="anonymous"></script>
+
 
     <style>
         .bd-placeholder-img {
@@ -60,9 +62,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}">LogOut</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'create' %}"><i class="fas fa-plus fa-sm"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">LogOut</a></li>
                     {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'signup' %}">SignUp</a>
